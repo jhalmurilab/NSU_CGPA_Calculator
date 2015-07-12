@@ -1,8 +1,8 @@
 package com.jhalmurilab.nsucgpacalculator;
 
 import android.app.Activity;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -12,22 +12,37 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 
-public class AddCourse extends Activity {
+public class AddCourse extends ActionBarActivity {
 
     Spinner spinner;
+    Spinner spinner1;
     public ArrayAdapter<CharSequence> adapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_course);
-        spinner =(Spinner) findViewById(R.id.planets_spinner);
-        adapter = ArrayAdapter.createFromResource(this,R.array.planets_spinner,android.R.layout.simple_spinner_item);
+        spinner =(Spinner) findViewById(R.id.selectgrade);
+        spinner1=(Spinner) findViewById(R.id.selectcredit);
+        adapter = ArrayAdapter.createFromResource(this,R.array.selectgrade,android.R.layout.simple_spinner_item);
+        adapter = ArrayAdapter.createFromResource(this,R.array.selectcredit,android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
+        spinner1.setAdapter(adapter);
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(getBaseContext(),parent.getItemIdAtPosition(position)+" Selected", Toast.LENGTH_LONG).show();
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+        spinner1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
             }
 
             @Override

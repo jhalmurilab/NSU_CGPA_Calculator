@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Course"
-        android:id="@+id/textView"
+        android:id="@+id/course"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
         android:focusable="true"
@@ -22,8 +22,8 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Credit"
-        android:id="@+id/textView2"
-        android:layout_alignTop="@+id/textView"
+        android:id="@+id/credit"
+        android:layout_alignTop="@+id/course"
         android:layout_centerHorizontal="true"
         android:focusableInTouchMode="true" />
 
@@ -32,12 +32,12 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Grade"
-        android:id="@+id/textView3"
+        android:id="@+id/grade"
         android:enabled="true"
         android:focusable="true"
         android:focusableInTouchMode="true"
         android:layout_alignParentTop="true"
-        android:layout_alignEnd="@+id/planets_spinner" />
+        android:layout_alignEnd="@+id/selectgrade" />
 
     <EditText
         android:layout_width="100dp"
@@ -45,17 +45,26 @@
         android:inputType="numberSigned"
         android:ems="10"
         android:id="@+id/editText"
-        android:layout_below="@+id/textView2"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="35dp"
-        android:clickable="false" />
+        android:clickable="false"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="63dp" />
 
     <Spinner
-        android:id="@+id/planets_spinner"
+        android:id="@+id/selectgrade"
         android:layout_width="100dp"
         android:layout_height="50dp"
-        android:layout_alignTop="@+id/editText"
+        android:spinnerMode="dropdown"
+        android:layout_below="@+id/grade"
         android:layout_alignParentEnd="true"
-        android:spinnerMode="dropdown" />
+        android:layout_marginTop="46dp" />
+
+    <Spinner
+        android:id="@+id/selectcredit"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:spinnerMode="dropdown"
+        android:layout_alignTop="@+id/selectgrade"
+        android:layout_toStartOf="@+id/selectgrade" />
 
 </RelativeLayout>

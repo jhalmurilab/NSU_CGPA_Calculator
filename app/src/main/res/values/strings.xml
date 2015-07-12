@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">NSU CGPA Calculator</string>
     <string name="action_settings">About</string>
-    <string-array name="planets_spinner">
+    <string-array name="selectgrade">
         <item>A</item>
         <item>A-</item>
         <item>B+</item>
@@ -15,5 +15,12 @@
         <item>F</item>
         <item>I</item>
         <item>W</item>
+    </string-array>
+
+    <string-array name="selectcredit">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
     </string-array>
 </resources>
