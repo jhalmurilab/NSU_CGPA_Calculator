@@ -24,10 +24,8 @@ public class AddCourse extends ActionBarActivity {
         spinner =(Spinner) findViewById(R.id.selectgrade);
         spinner1=(Spinner) findViewById(R.id.selectcredit);
         adapter = ArrayAdapter.createFromResource(this,R.array.selectgrade,android.R.layout.simple_spinner_item);
-        adapter = ArrayAdapter.createFromResource(this,R.array.selectcredit,android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
-        spinner1.setAdapter(adapter);
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -39,17 +37,7 @@ public class AddCourse extends ActionBarActivity {
 
             }
         });
-        spinner1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
-        });
     }
 
     @Override
